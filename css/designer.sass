@@ -1,0 +1,242 @@
+$client_height: 98vh
+$splitter_size: 6px
+$border: 1px solid #e7e7e7
+//Bootstrap
+.container
+	width: auto
+
+//Designer
+body
+	font-family: "Segoe UI", Ubuntu, "Droid Sans", sans-serif
+	font-size: 10pt
+	-moz-user-select: -moz-none
+	-khtml-user-select: none
+	-webkit-user-select: none
+	margin: 0
+
+#busy.full, #shit
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	display: block
+	z-index: 2
+	text-align: center
+	vertical-align: middle
+	background-color: #ffffff
+
+#busy
+	display: none
+	min-width: 48px
+	min-height: 48px
+	background-size: contain
+	background: url("/lab/img/busy.gif") no-repeat center
+
+#shit > div
+	margin-top: 30vh
+
+#shit *
+	margin: 1mm
+
+div.disable
+	color: #999999
+	cursor: default
+
+.designer
+	bottom: 0
+
+.designer .hider
+	cursor: pointer
+	height: 20px
+	vertical-align: middle
+
+.designer .hider, .splitter
+	background-color: #f5f5f5
+	&:hover
+		background-color: #dcdcdc
+
+.panel
+	position: absolute
+	text-align: left
+	vertical-align: top
+	padding: 1mm
+	border-color: #dddddd
+	z-index: 1
+
+.panel .div
+	border-left-width: 0
+	border-right-width: 0
+	border-top: 1px solid #dddddd
+	border-bottom: 1px solid #dddddd
+
+.code
+	position: absolute
+	min-height: 10px
+	margin: 0
+	padding: 0
+	background-color: rgba(255, 255, 255, 0.8)
+
+.panel.colors
+	border-spacing: 2px
+	div
+		display: table-row
+		div
+			display: table-cell
+			width: 12px
+			height: 12px
+			cursor: pointer
+
+.panel input[type=checkbox]
+	margin: 1mm
+
+.panel > button
+	margin-top: 1mm
+
+header
+	border-bottom: $border
+
+article
+	width: 100%
+	height: $client_height
+
+
+svg.workspace
+	//border: 1px solid rgba(0, 0, 0, 0.1)
+	margin: 0
+
+svg
+	display: inline-block
+	vertical-align: top
+
+.layers, .shapes
+	div
+		cursor: pointer
+
+.menu.Visible, .dialog.Visible
+	display: block
+
+nav > div
+	display: inline-block
+
+.action
+	cursor: pointer
+	> span, > svg
+		padding: 2pt
+	> span
+		vertical-align: middle
+
+
+nav, .menu
+	background-color: #f8f8f8
+	> div
+		cursor: pointer
+		> span, > svg
+			padding: 2pt
+		> svg
+			border-right: $border
+		> span
+			vertical-align: middle
+	> div:hover:not(.disable)
+		background-color: #e7e7e7
+
+.icon
+	width: 16px
+	height: 16px
+
+.menu
+	position: fixed
+	display: none
+	z-index: 1
+	border: $border
+	background-color: rgba(255, 255, 255, 0.85)
+	padding: 1px
+	> div:hover
+		text-shadow: 0 0 1px #999999
+	svg
+		width: 16px
+		height: 16px
+
+.properties
+	.content
+		display: table
+		> div
+			display: table-row
+			font-size: 10pt
+			margin: 0
+			padding: 0
+			> *
+				display: table-cell
+				margin: 0
+				padding: 0
+			> input[type=text], > input[type=number]
+				border: 1px solid transparent
+				border-bottom: 1px solid rgba(0, 0, 0, 0.50)
+
+circle.control
+	fill: transparent
+	stroke: black
+
+div.Active
+	font-weight: bold
+
+rect.Active, polyline.Active
+	stroke: red
+	stroke-width: 2px
+
+text.Active
+	text-shadow: 0 0 1mm red
+
+circle.selected
+	fill: rgb(255, 0, 0)
+
+foreignObject
+	border: 3px double rgba(177, 180, 180, 0.80)
+	background-color: rgba(177, 180, 180, 0.80)
+
+.dialog
+	display: none
+	position: fixed
+	background-color: rgba(255, 255, 255, 0.96)
+	border: 2px solid #000000
+	text-align: center
+	top: 4em
+	left: 4em
+	min-width: 3cm
+	min-height: 2cm
+	z-index: 2
+	vertical-align: top
+	textarea
+		min-height: 30vh
+		max-width: 28vw
+		min-width: 28vw
+		border: 1px solid #000000
+		border-right-color: rgba(0, 0, 0, 0)
+		border-left-color: rgba(0, 0, 0, 0)
+	line
+		stroke: rgb(0, 0, 0)
+	svg:hover
+		stroke-width: 4px
+		stroke-linecap: round
+	.content
+		margin: 3mm
+	.head
+		padding: 1mm
+		text-align: left
+	.foot
+		padding: 1mm
+		text-align: right
+	.head, .foot
+		.action
+			display: inline-block
+
+#dialogs > :not(.dialog)
+	display: none
+
+.rule-text
+	text-shadow: 0 0 1px white
+	font-weight: bold
+	color: #AAAAAA
+	font-family: "Courier New", monospace

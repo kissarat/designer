@@ -1,0 +1,40 @@
+.menu.visible {
+    -webkit-animation-name: show;
+    -webkit-animation-duration: 300ms;
+}
+
+.menu span:hover {
+    -webkit-animation-name: shadow;
+    -webkit-animation-duration: 600ms;
+}
+
+.visible div:hover:not(.disable) {
+    -webkit-animation-name: menu-selection;
+    -webkit-animation-duration: 600ms;
+}
+
+#shit > * {
+    -webkit-animation-name: delay-show;
+    -webkit-animation-duration: 1.2s;
+}
+
+@-webkit-keyframes show {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+@-webkit-keyframes shadow {
+    from { text-shadow: 0 0 0 #999999; }
+    to   { text-shadow: 0 0 1px #999999; }
+}
+
+@-webkit-keyframes menu-selection {
+    from { background-color: transparent; }
+    to   { background-color: #e7e7e7; }
+}
+
+@-webkit-keyframes delay-show {
+    from { opacity: 0 }
+    30%  { opacity: 0 }
+    to   { opacity: 1 }
+}

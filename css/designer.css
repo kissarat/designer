@@ -1,0 +1,233 @@
+.container {
+  width: auto; }
+
+body {
+  font-family: "Segoe UI", Ubuntu, "Droid Sans", sans-serif;
+  font-size: 10pt;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  margin: 0; }
+
+#busy.full, #shit {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 2;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ffffff; }
+
+#busy {
+  display: none;
+  min-width: 48px;
+  min-height: 48px;
+  background-size: contain;
+  background: url("/lab/img/busy.gif") no-repeat center; }
+
+#shit > div {
+  margin-top: 30vh; }
+
+#shit * {
+  margin: 1mm; }
+
+div.disable {
+  color: #999999;
+  cursor: default; }
+
+.designer {
+  bottom: 0; }
+
+.designer .hider {
+  cursor: pointer;
+  height: 20px;
+  vertical-align: middle; }
+
+.designer .hider, .splitter {
+  background-color: #f5f5f5; }
+  .designer .hider:hover, .splitter:hover {
+    background-color: #dcdcdc; }
+
+.panel {
+  position: absolute;
+  text-align: left;
+  vertical-align: top;
+  padding: 1mm;
+  border-color: #dddddd;
+  z-index: 1; }
+
+.panel .div {
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd; }
+
+.code {
+  position: absolute;
+  min-height: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.panel.colors {
+  border-spacing: 2px; }
+  .panel.colors div {
+    display: table-row; }
+    .panel.colors div div {
+      display: table-cell;
+      width: 12px;
+      height: 12px;
+      cursor: pointer; }
+
+.panel input[type=checkbox] {
+  margin: 1mm; }
+
+.panel > button {
+  margin-top: 1mm; }
+
+header {
+  border-bottom: 1px solid #e7e7e7; }
+
+article {
+  width: 100%;
+  height: 98vh; }
+
+svg.workspace {
+  margin: 0; }
+
+svg {
+  display: inline-block;
+  vertical-align: top; }
+
+.layers div, .shapes div {
+  cursor: pointer; }
+
+.menu.Visible, .dialog.Visible {
+  display: block; }
+
+nav > div {
+  display: inline-block; }
+
+.action {
+  cursor: pointer; }
+  .action > span, .action > svg {
+    padding: 2pt; }
+  .action > span {
+    vertical-align: middle; }
+
+nav, .menu {
+  background-color: #f8f8f8; }
+  nav > div, .menu > div {
+    cursor: pointer; }
+    nav > div > span, nav > div > svg, .menu > div > span, .menu > div > svg {
+      padding: 2pt; }
+    nav > div > svg, .menu > div > svg {
+      border-right: 1px solid #e7e7e7; }
+    nav > div > span, .menu > div > span {
+      vertical-align: middle; }
+  nav > div:hover:not(.disable), .menu > div:hover:not(.disable) {
+    background-color: #e7e7e7; }
+
+.icon {
+  width: 16px;
+  height: 16px; }
+
+.menu {
+  position: fixed;
+  display: none;
+  z-index: 1;
+  border: 1px solid #e7e7e7;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1px; }
+  .menu > div:hover {
+    text-shadow: 0 0 1px #999999; }
+  .menu svg {
+    width: 16px;
+    height: 16px; }
+
+.properties .content {
+  display: table; }
+  .properties .content > div {
+    display: table-row;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0; }
+    .properties .content > div > * {
+      display: table-cell;
+      margin: 0;
+      padding: 0; }
+    .properties .content > div > input[type=text], .properties .content > div > input[type=number] {
+      border: 1px solid transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+
+circle.control {
+  fill: transparent;
+  stroke: black; }
+
+div.Active {
+  font-weight: bold; }
+
+rect.Active, polyline.Active {
+  stroke: red;
+  stroke-width: 2px; }
+
+text.Active {
+  text-shadow: 0 0 1mm red; }
+
+circle.selected {
+  fill: red; }
+
+foreignObject {
+  border: 3px double rgba(177, 180, 180, 0.8);
+  background-color: rgba(177, 180, 180, 0.8); }
+
+.dialog {
+  display: none;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 2px solid #000000;
+  text-align: center;
+  top: 4em;
+  left: 4em;
+  min-width: 3cm;
+  min-height: 2cm;
+  z-index: 2;
+  vertical-align: top; }
+  .dialog textarea {
+    min-height: 30vh;
+    max-width: 28vw;
+    min-width: 28vw;
+    border: 1px solid #000000;
+    border-right-color: transparent;
+    border-left-color: transparent; }
+  .dialog line {
+    stroke: black; }
+  .dialog svg:hover {
+    stroke-width: 4px;
+    stroke-linecap: round; }
+  .dialog .content {
+    margin: 3mm; }
+  .dialog .head {
+    padding: 1mm;
+    text-align: left; }
+  .dialog .foot {
+    padding: 1mm;
+    text-align: right; }
+  .dialog .head .action, .dialog .foot .action {
+    display: inline-block; }
+
+#dialogs > :not(.dialog) {
+  display: none; }
+
+.rule-text {
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  color: #AAAAAA;
+  font-family: "Courier New", monospace; }
+
+/*# sourceMappingURL=designer.css.map */

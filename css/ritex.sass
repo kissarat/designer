@@ -1,0 +1,163 @@
+body {
+  font-family: "Segoe UI", Ubuntu, "Droid Sans", sans-serif;
+  text-align: center;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  padding: 0; }
+
+.designer {
+  margin: 0 auto; }
+
+.column {
+  float: left;
+  background-color: white; }
+  .column.center {
+    width: 64vw; }
+  .column.left {
+    width: 12vw; }
+
+.splitter {
+  margin: 0; }
+  .splitter.horizontal {
+    cursor: ns-resize;
+    height: 6px; }
+  .splitter.vertical {
+    cursor: ew-resize;
+    width: 6px;
+    float: left;
+    height: 96vh;
+    border: 1px solid black; }
+
+.panel {
+  text-align: left;
+  vertical-align: top;
+  margin: 1vmin;
+  border-bottom: 1px double black;
+  padding-bottom: 1vmin; }
+
+.code {
+  position: absolute;
+  min-height: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.panel.colors {
+  border-spacing: 2px;
+  width: 20vw; }
+  .panel.colors div {
+    display: table-row; }
+    .panel.colors div div {
+      display: table-cell;
+      width: 15px;
+      height: 15px;
+      cursor: pointer; }
+
+#surface {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  height: 96vh; }
+
+svg {
+  display: inline-block;
+  vertical-align: top; }
+
+.layers, .shapes {
+  width: 10vw; }
+  .layers div, .shapes div {
+    padding: 1px;
+    cursor: pointer; }
+
+.contextmenu.visible, .dialog.visible {
+  display: block; }
+
+.contextmenu {
+  position: fixed;
+  display: none;
+  z-index: 1;
+  border: 1px solid black;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1px; }
+  .contextmenu > div {
+    padding: 1px;
+    cursor: pointer; }
+  .contextmenu > div:hover {
+    text-shadow: 0 0 1px black; }
+  .contextmenu span {
+    line-height: 24px;
+    vertical-align: middle;
+    margin-right: 1px; }
+  .contextmenu svg {
+    width: 24px;
+    height: 24px; }
+
+.properties .content {
+  display: table;
+  width: 20vw; }
+  .properties .content > div {
+    display: table-row; }
+    .properties .content > div > * {
+      display: table-cell;
+      padding: 1mm; }
+
+circle.control {
+  fill: transparent;
+  stroke: black; }
+
+div.active {
+  font-weight: bold; }
+
+rect.active, polyline.active {
+  stroke: red;
+  stroke-width: 2px; }
+
+text.active {
+  text-shadow: 0 0 1mm red; }
+
+circle.selected {
+  fill: red; }
+
+foreignObject {
+  border: 3px double rgba(177, 180, 180, 0.8);
+  background-color: rgba(177, 180, 180, 0.8); }
+
+.dialog {
+  display: none;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 2px solid black;
+  left: 30vw;
+  top: 20vh;
+  width: 30vw;
+  z-index: 2;
+  vertical-align: top; }
+  .dialog textarea {
+    min-height: 30vh;
+    max-width: 28vw;
+    min-width: 28vw;
+    border: 1px solid black;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0); }
+  .dialog line {
+    stroke: black; }
+  .dialog svg {
+    cursor: pointer;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2px;
+    margin: 0.5vw; }
+  .dialog svg:hover {
+    stroke-width: 4px;
+    stroke-linecap: round; }
+  .dialog .header svg {
+    float: left; }
+  .dialog .footer svg {
+    float: right; }
+
+.rule-text {
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  color: #aaaaaa;
+  font-family: "Courier New"; }
